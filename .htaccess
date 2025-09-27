@@ -1,0 +1,46 @@
+# 家长会签到系统 - URL重写配置
+
+# 启用URL重写引擎
+RewriteEngine On
+
+# 如果请求的是真实存在的文件或目录，则直接访问
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 保护配置文件不被直接访问
+<FilesMatch "^(passwords\.json|class_tokens\.json)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# 保护数据文件不被直接访问
+<FilesMatch "\.json$">
+    <If "-f %{REQUEST_FILENAME}">
+        Order Deny,Allow
+        Deny from all
+    </If>
+</FilesMatch>
+
+# 保护PHP配置文件不被直接访问
+<FilesMatch "^(config\.php|auth\.php)$">
+    <If "-f %{REQUEST_FILENAME}">
+        Order Deny,Allow
+        Deny from all
+    </If>
+</FilesMatch>
+
+# 设置默认字符集
+AddDefaultCharset UTF-8
+
+# 防止MIME类型嗅探
+Header set X-Content-Type-Options "nosniff"
+
+# 启用XSS保护
+Header set X-XSS-Protection "1; mode=block"
+
+# 限制iframe嵌入
+Header set X-Frame-Options "SAMEORIGIN"
+
+# 启用严格传输安全（如果使用HTTPS）
+# Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"

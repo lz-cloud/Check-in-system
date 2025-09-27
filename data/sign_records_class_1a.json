@@ -1,0 +1,16 @@
+{
+    "2024-03-20": {
+        "1": {"signed": true, "timestamp": 1710921600, "ip": "192.168.1.1"},
+        "2": {"signed": true, "timestamp": 1710922000, "ip": "192.168.1.2"},
+        "3": {"signed": false},
+        "4": {"signed": true, "timestamp": 1710922500, "ip": "192.168.1.3"},
+        "5": {"signed": false}
+    },
+    "2024-03-21": {
+        "1": {"signed": true, "timestamp": 1710928800, "ip": "192.168.1.1"},
+        "2": {"signed": true, "timestamp": 1710929000, "ip": "192.168.1.2"},
+        "3": {"signed": true, "timestamp": 1710929300, "ip": "192.168.1.4"},
+        "4": {"signed": true, "timestamp": 1710929500, "ip": "192.168.1.3"},
+        "5": {"signed": true, "timestamp": 1710930000, "ip": "192.168.1.5"}
+    }
+}

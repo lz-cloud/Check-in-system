@@ -1,0 +1,165 @@
+/* 响应式布局样式文件 - 移动端优先设计 */
+
+/* 基础移动端样式 (默认) */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* 移动端优先：导航样式已在侧边栏文件中实现为顶部导航栏 */
+
+/* 移动端卡片布局 */
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+/* 移动端表单布局 */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* 移动端按钮调整 */
+.btn {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* 移动端表格调整 */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* 确保内容不被顶部导航栏遮挡 */
+.main-content {
+    padding-top: 70px;
+    padding-bottom: 20px;
+}
+
+/* 平板端适配 (768px - 1024px) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    /* 平板端卡片网格 */
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* 平板端表单布局 */
+    .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -5px;
+        margin-left: -5px;
+    }
+    
+    .form-col {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+    
+    /* 平板端按钮调整 */
+    .btn {
+        width: auto;
+    }
+}
+
+/* 桌面端完整布局 (1025px及以上) */
+@media (min-width: 1025px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    /* 桌面端卡片网格 */
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    /* 桌面端统计卡片布局 */
+    .stats-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+    
+    /* 桌面端表单布局优化 */
+    .form-row {
+        margin-right: -15px;
+        margin-left: -15px;
+    }
+    
+    .form-col {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
+
+/* 小屏幕设备特殊处理 */
+@media (max-width: 480px) {
+    /* 调整卡片内边距 */
+    .card-body {
+        padding: 15px;
+    }
+    
+    /* 调整文字大小 */
+    h1, .h1 {
+        font-size: 1.75rem;
+    }
+    
+    h2, .h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3, .h3 {
+        font-size: 1.25rem;
+    }
+    
+    /* 按钮尺寸优化 */
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+    
+    /* 签到页面特殊优化 */
+    .sign-banner {
+        padding: 30px 15px;
+    }
+    
+    .sign-btn {
+        font-size: 1.1rem;
+        padding: 15px 20px;
+    }
+}
+
+/* 打印样式 */
+@media print {
+    /* 隐藏非打印元素 */
+    .no-print {
+        display: none !important;
+    }
+    
+    /* 移除背景色和阴影 */
+    .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    /* 调整表格样式以适应打印 */
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .table th,
+    .table td {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+}

@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "张三",
+        "token": "a1b2c3d4e5f67890",
+        "active": true
+    },
+    {
+        "id": 2,
+        "name": "李四",
+        "token": "b2c3d4e5f67890a1",
+        "active": true
+    },
+    {
+        "id": 3,
+        "name": "王五",
+        "token": "c3d4e5f67890a1b2",
+        "active": true
+    },
+    {
+        "id": 4,
+        "name": "赵六",
+        "token": "d4e5f67890a1b2c3",
+        "active": true
+    },
+    {
+        "id": 5,
+        "name": "孙七",
+        "token": "e5f67890a1b2c3d4",
+        "active": true
+    }
+]

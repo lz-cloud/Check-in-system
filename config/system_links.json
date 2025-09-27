@@ -1,0 +1,5 @@
+{
+    "base_url": "",
+    "qr_code_api": "https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=",
+    "sign_page": "/sign.php"
+}
