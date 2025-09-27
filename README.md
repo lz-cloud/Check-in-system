@@ -23,7 +23,7 @@
 ## 🚀 开始使用
 
 1. **下载系统**
-   - 从[GitHub仓库]([https://github.com/lz-cloud/Check-in-system/releases/tag/ok])下载最新版本的系统压缩包
+   - 从[GitHub仓库](https://github.com/lz-cloud/Check-in-system/releases/tag/ok)下载最新版本的系统压缩包
    - 解压到您的Web服务器根目录或子目录
    - 设置 家长会签到系统/config/system_links.json
    - 开始使用吧
